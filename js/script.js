@@ -3,9 +3,10 @@ if(!window['lezhin']) {
 	( function (_O) {
     _O.init = () => {
       const v = _O.Vars;
-      v.curRound = 16;
+      v.curRound = 32;
       v.curStage = 0;
       v.gameHistory = {
+        '32': [],
         '16': [],
         '8': [],
         '4': [],
@@ -15,19 +16,19 @@ if(!window['lezhin']) {
       v.lists = _O.Ctrl.getLists();
       _O.Ctrl.prevCancelOnOff();
     };
-    _O.start = () => {
+    _O.start = (version) => {
       _O.init();
-      _O.Ctrl.gameNewStart.bind(_O.Ctrl)();
+      _O.Ctrl.gameNewStart(version);
     };
     _O.Vars = {
       lists:null,
       curRound: 0,
       curStage: 0,
-      maxRound: 16,
+      maxRound: 32,
       gameHistory: null
     };
     _O.Ctrl = {
-      getLists() {
+      getLists(version) {
         return [
           {
             name: '박은빈',
@@ -107,6 +108,86 @@ if(!window['lezhin']) {
           {
             name: '고아라',
             imgSrc: 'images/16.jpg',
+            selected: false
+          },
+          {
+            name: '신세경',
+            imgSrc: 'images/17.jpg',
+            selected: false
+          },
+          {
+            name: '권나라',
+            imgSrc: 'images/18.jpg',
+            selected: false
+          },
+          {
+            name: '김다미',
+            imgSrc: 'images/19.jpg',
+            selected: false
+          },
+          {
+            name: '김태리',
+            imgSrc: 'images/20.jpg',
+            selected: false
+          },
+          {
+            name: '송하윤',
+            imgSrc: 'images/21.jpg',
+            selected: false
+          },
+          {
+            name: '고보결',
+            imgSrc: 'images/22.jpg',
+            selected: false
+          },
+          {
+            name: '오연서',
+            imgSrc: 'images/23.jpg',
+            selected: false
+          },
+          {
+            name: '공승연',
+            imgSrc: 'images/24.jpg',
+            selected: false
+          },
+          {
+            name: '임수향',
+            imgSrc: 'images/25.jpg',
+            selected: false
+          },
+          {
+            name: '한지현',
+            imgSrc: 'images/26.jpg',
+            selected: false
+          },
+          {
+            name: '이지아',
+            imgSrc: 'images/27.jpg',
+            selected: false
+          },
+          {
+            name: '김소은',
+            imgSrc: 'images/28.jpg',
+            selected: false
+          },
+          {
+            name: '이세영',
+            imgSrc: 'images/29.jpg',
+            selected: false
+          },
+          {
+            name: '김고은',
+            imgSrc: 'images/30.jpg',
+            selected: false
+          },
+          {
+            name: '전소민',
+            imgSrc: 'images/31.jpg',
+            selected: false
+          },
+          {
+            name: '이엘리야',
+            imgSrc: 'images/32.jpg',
             selected: false
           }
         ];
